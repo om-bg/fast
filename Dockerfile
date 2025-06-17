@@ -17,8 +17,7 @@ RUN apt-get update && apt-get install -y \
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-# Étape 6 : Exposer le port
-EXPOSE 8000
+RUN chmod +x start.sh
 
-# Étape 7 : Lancer l'application
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Lancer le script start.sh
+CMD ["./start.sh"]

@@ -1,5 +1,7 @@
 fastapi==0.111.0
 uvicorn==0.30.1
-opencv-python-headless==4.9.0.80
+opencv-python-headless==4.9.0.80 # Ou une version légèrement plus ancienne si vous trouvez qu'elle est plus petite
 numpy==1.26.4
 ultralytics==8.2.35
+# Ajoutez explicitement la version CPU de PyTorch si ultralytics ne la tire pas correctement
+torch==2.3.0+cpu --index-url https://download.pytorch.org/whl/cpu
